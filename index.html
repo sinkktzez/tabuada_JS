@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <title>Tabuada</title>
+</head>
+<body >
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h2 class="text-center mb-4">Tabuada</h2>
+                            <div class="tabuada">
+
+                                    <script>
+                                        valor = prompt("Digite um número: ");
+                                        lim = prompt("Quantas multiplicações deseja que seja exibida na tabuada:");
+
+                                        if(isNaN(valor) || isNaN(lim) || !valor || !lim){
+                                            document.write("<div class=alert alert-danger>Por favor, digite números validos!</div>");
+                                            setTimeout(function(){
+                                            location.reload();
+                                            }, 3000);
+                                        }else{
+                                            for(n=0;n<=lim;n++){
+                                            resu = valor*n
+                                            document.write(valor + "x" + n + "=" + resu + "<br>");
+                                            }
+                                        }
+                                    </script>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+</html>
